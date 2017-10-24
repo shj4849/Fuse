@@ -1,0 +1,16 @@
+<hikr.Page ux:Class="Client">
+    <Router ux:Dependency="router" />
+    <JavaScript File="Client.js" />
+    <DockPanel>
+        <Grid ColumnCount="1" Dock="Bottom">
+            <hikr.Button Text="Back" Clicked="{cancel}" />
+        </Grid>
+        <hikr.Text FontSize="20" TextAlignment="Center" TextWrapping="Wrap" Dock="Top" Margin="0,20" > Client </hikr.Text>
+        <ScrollView ux:Name="theScroll">
+          <WhileActive Threshold="0.1">
+            <Set theScroll.ScrollPosition="0"/>
+          </WhileActive>
+                  <Image File="../Assets/client.png" />
+        </ScrollView>
+    </DockPanel>
+</hikr.Page>

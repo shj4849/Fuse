@@ -1,0 +1,18 @@
+{
+  "Name":"FuseSQLiteLib",
+  "RootNamespace":"",
+  "Packages": [
+    "Fuse",
+    "FuseJS"
+  ],
+  "Includes": [
+    "*.uno",
+    "*.uxl"
+  ],
+  "FusePM": {
+    "Dependencies": [
+      "https://github.com/bolav/fuse-foreignhelpers"
+    ]
+  },
+  "Version": "0.12.0"
+}

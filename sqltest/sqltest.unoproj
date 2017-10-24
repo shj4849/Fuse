@@ -1,0 +1,21 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+    "Fuse",
+    "FuseJS"
+  ],
+  "Includes": [
+    "*"
+  ],
+  "Projects":[
+  ""fuse-sqlite-master/fuse-sqlite-master/sqlite_include.unoproj"
+  ],
+  "Excludes":[
+  "fuse-sqlite-master/"
+  ],
+  "FusePM": {
+    "Dependencies": [
+      "https://github.com/bolav/fuse-sqlite"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+  	"Fuse",
+  	"FuseJS",
+    "Fuse.Launcher",
+    "Fuse.Maps"
+  ],
+  "Includes": [
+    "*",
+    "Modules/*.js:Bundle",
+    "Assets/*.jpg:Bundle",
+    "Assets/*.png:Bundle"
+  ],
+  "Android": {
+    "Geo": {
+      "ApiKey" : "AIzaSyCFO23mJ-zaAO7q1UAzIJu_fhho4qvEhBo"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<App>
+	<JavaScript>
+		var Observable = require("FuseJS/Observable");
+		var toastMsg = require('FuseToast');
+
+		var appExtiTimeout;
+		var appExitCnt = 0;
+		var appExit = Observable(false);
+		var appExitChk = function() {
+	        clearTimeout(appExtiTimeout);
+
+	        //1.5초내 BackButton 누르지 않으면 초기화
+	        appExtiTimeout = setTimeout(function(){
+	            appExitCnt = 0;
+	        }, 1500);
+
+	        appExitCnt++;
+
+	        if(appExitCnt > 1) {
+	            appExit.value = true;
+	        } else {
+	            toastMsg.toastIt("'뒤로' 버튼을 한번 더 누르시면 종료됩니다.", "short");
+	        }
+		}
+
+		module.exports = {
+			appExitChk,
+			appExit
+		};
+
+	</JavaScript>
+
+	<iOS.StatusBarConfig Style="Light" />
+	<Android.StatusBarConfig Color="#022328" />
+
+	<FuseToast ux:Global="FuseToast" />
+	<Panel Alignment="Center">
+		<Text>Fuse Toast And BackButton</Text>
+	</Panel>
+
+
+	<OnBackButton Handler="{appExitChk}">
+		<!--<DebugAction Message="BackButton pressed" />-->
+	</OnBackButton>
+	<WhileTrue Value="{appExit}" Bypass="Never">
+		<HomeScreen Type="Finish" />
+	</WhileTrue>
+</App>

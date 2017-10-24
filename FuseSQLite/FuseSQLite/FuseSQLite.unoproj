@@ -1,0 +1,24 @@
+{
+  "Name":"FuseSQLiteTest",
+  "RootNamespace": "",
+  "Packages": [
+    "Fuse",
+    "FuseJS"
+  ],
+  "Includes": [
+    "*",
+    "fuseDBTest2.db:Bundle"
+  ],
+  "Projects": [
+    "fuse_modules/bolav/fuse-sqlite/sqlite_include.unoproj"
+  ],
+  "Excludes": [
+    "fuse_modules/"
+  ],
+  "Version": "0.1.0",
+  "FusePM": {
+    "Dependencies": [
+      "https://github.com/bolav/fuse-sqlite"
+    ]
+  }
+}

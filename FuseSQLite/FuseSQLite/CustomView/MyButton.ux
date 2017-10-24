@@ -1,0 +1,13 @@
+<Panel ux:Class="MyButton">
+	<string ux:Property="mText" />
+	<float4 ux:Property="mColor" />
+
+	<Rectangle ux:Name="rect" Width="80" Height="40" CornerRadius="10">
+		<Stroke Width="2" Color="{Property mColor}"/>
+		<Text Alignment="Center" Value="{Property mText}" Color="{Property mColor}" FontSize="18"/>
+	</Rectangle>
+
+	<Clicked>
+		<Scale Target="rect" Factor="0.8" Duration="0.1" />
+	</Clicked>
+</Panel>

@@ -1,0 +1,33 @@
+<hikr.Page ux:Class="IntroductionPage">
+
+    <!--router 이름의 디펜던시 Router 인스턴스를 생성 (주입 받아 동작함)-->
+    <Router ux:Dependency="router" />
+    <JavaScript File="IntroductionPage.js" />
+      <DockPanel>
+        <Grid ColumnCount="1" Dock="Bottom">
+            <hikr.Button Text="Back" Clicked="{cancel}" />
+        </Grid>
+          <hikr.Text FontSize="40" TextAlignment="Center" Dock="Top" Margin="0,40">제품소개</hikr.Text>
+
+          <ScrollView>
+              <StackPanel>
+                  <Rectangle ux:Class="Seperato" Height="1.5" Fill="#bea5f2" />
+
+                  <Each Items="{hikes}">
+                      <Seperato />
+                      <!--Text 를 Panel로 감싸고 Panel에 Clicked 를 적용-->
+                      <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goHike}">
+                          <Text Color="#264FAEFE" Value="{name}" Margin="20" />
+
+                          <!--눌렀을때 적용되는 애니메이션을 위한 트리거를 추가-->
+                          <WhilePressed>
+                              <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                          </WhilePressed>
+                      </Panel>
+                  </Each>
+
+                  <Seperato />
+              </StackPanel>
+          </ScrollView>
+      </DockPanel>
+  </hikr.Page>

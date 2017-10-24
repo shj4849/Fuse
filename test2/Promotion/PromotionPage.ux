@@ -1,0 +1,32 @@
+<hikr.Page ux:Class="PromotionPage">
+
+    <Router ux:Dependency="router" />
+    <JavaScript File="PromotionPage.js" />
+      <DockPanel>
+        <Grid ColumnCount="1" Dock="Bottom">
+            <hikr.Button Text="Back" Clicked="{cancel}" />
+        </Grid>
+        <hikr.Text FontSize="40" TextAlignment="Center" Dock="Top" Margin="0,40">프로모션</hikr.Text>
+
+        <ScrollView>
+            <StackPanel>
+                <Rectangle ux:Class="Seperato1" Height="1.5" Fill="#bea5f2" />
+                  <Each Items="{hikes}">
+                    <Seperato1 />
+                      <!--Text 를 Panel로 감싸고 Panel에 Clicked 를 적용-->
+                      <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goHike}" Margin="5">
+                        <Grid ColumnCount="2">
+                          <Image File="{file}" Width="180" />
+                          <Text Color="#264FAEFE" Value="{name}" TextWrapping="Wrap" Margin="5" TextAlignment="Center" />
+                          <WhilePressed>
+                            <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                          </WhilePressed>
+                        </Grid>
+
+                      </Panel>
+                    </Each>
+              <Seperato1 />
+            </StackPanel>
+        </ScrollView>
+      </DockPanel>
+</hikr.Page>

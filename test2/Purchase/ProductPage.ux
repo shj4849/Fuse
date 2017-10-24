@@ -1,0 +1,45 @@
+<hikr.Page ux:Class="ProductPage">
+    <!--디펜던시 라우터 router를 추가-->
+    <Router ux:Dependency="router" />
+    <!--별도의 파일로 분리한 Javascript를 import 함-->
+    <JavaScript File="ProductPage.js" />
+    <DockPanel>
+        <Grid ColumnCount="1" Dock="Bottom">
+            <hikr.Button Text="Back" Clicked="{cancel}" />
+        </Grid>
+
+
+        <ScrollView ux:Name="theScroll">
+          <WhileActive Threshold="0.1">
+            <Set theScroll.ScrollPosition="0"/>
+          </WhileActive>
+            <StackPanel ItemSpacing="10" Padding="10">
+                <hikr.Text ux:Class="TitleText" Opacity=".6" Margin="0,0,0,5" />
+                <StackPanel>
+                  <Image File="{file}" Width="180" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TitleText>Name:</TitleText>
+                </StackPanel>
+                <Text Value="{name}" TextColor="Black" />
+
+                <StackPanel>
+                    <TitleText>Manufacturer:</TitleText>
+                    <Text Value="{manufacturer}" TextColor="Black" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TitleText>Price (원):</TitleText>
+                    <Text Value="{price}" TextColor="Black" />
+
+                </StackPanel>
+                <StackPanel>
+                  <TitleText>설명:</TitleText>
+                  <Image File="{file1}" />
+
+                </StackPanel>
+            </StackPanel>
+        </ScrollView>
+    </DockPanel>
+</hikr.Page>

@@ -1,0 +1,19 @@
+<hikr.Page ux:Class="Promotion1">
+    <!--디펜던시 라우터 router를 추가-->
+    <Router ux:Dependency="router" />
+    <!--별도의 파일로 분리한 Javascript를 import 함-->
+    <JavaScript File="Promotion1.js" />
+    <DockPanel>
+        <Grid ColumnCount="1" Dock="Bottom">
+            <hikr.Button Text="Back" Clicked="{cancel}" />
+        </Grid>
+        <hikr.Text FontSize="20" TextAlignment="Center" TextWrapping="Wrap" Dock="Top" Margin="0,20" Value ="{name}" />
+
+        <ScrollView ux:Name="theScroll">
+          <WhileActive Threshold="0.1">
+            <Set theScroll.ScrollPosition="0"/>
+          </WhileActive>
+                  <Image File="{file1}" StretchDirection="Both"/>
+        </ScrollView>
+    </DockPanel>
+</hikr.Page>

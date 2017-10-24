@@ -1,0 +1,80 @@
+<hikr.Page ux:Class="PurchasePage">
+
+    <!--router 이름의 디펜던시 Router 인스턴스를 생성 (주입 받아 동작함)-->
+    <Router ux:Dependency="router" />
+    <JavaScript File="PurchasePage.js" />
+    <DockPanel>
+      <OnBackButton>
+       <GoBack />
+     </OnBackButton>
+
+      <Grid ColumnCount="1" Dock="Bottom">
+        <hikr.Button Text="Back" Clicked="{cancel}" />
+        <!--  <Image File="../Assets/drm.png" Width="330" Y="-10" /> -->
+      </Grid>
+        <hikr.Text FontSize="40" TextAlignment="Center" Dock="Top" Margin="0,40">제품구매</hikr.Text>
+        <ScrollView>
+            <StackPanel>
+              <Rectangle ux:Class="Seperator" Height="1.5" Fill="#bea5f2" />
+              <Seperator />
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gozw}">
+                <Text ux:Class="Text2" FontSize="16" Color="#264FAEFE" Margin="20" />
+                <Text2>ZWCAD</Text2>
+                <!--눌렀을때 적용되는 애니메이션을 위한 트리거를 추가-->
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator />
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goms}">
+                <Text2>Microsoft</Text2>
+                <!--눌렀을때 적용되는 애니메이션을 위한 트리거를 추가-->
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator />
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goadobe}">
+                <Text2>Adobe</Text2>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator />
+
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goauto}">
+                <Text2>Autodesk</Text2>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator />
+
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gohan}">
+                <Text2>한글과 컴퓨터</Text2>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator />
+
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{govac}">
+                <Text2>백신</Text2>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator />
+
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gosol}">
+                <Text2>솔루션</Text2>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator />
+
+            </StackPanel>
+        </ScrollView>
+    </DockPanel>
+</hikr.Page>

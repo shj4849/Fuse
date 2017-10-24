@@ -1,0 +1,8 @@
+<Panel ux:Class="TextField">
+	<string ux:Property="mValue"/>
+
+	<TextView TextColor="Black" Alignment="Center" Width="90%" Value="{Property mValue}" MaxLength="20" />
+	<Rectangle Width="100%" Height="30" CornerRadius="10">
+		<Stroke Width="2" Color="Black"/>
+	</Rectangle>
+</Panel>

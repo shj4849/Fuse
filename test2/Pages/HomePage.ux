@@ -1,0 +1,71 @@
+<hikr.Page ux:Class="HomePage">
+    <Router ux:Dependency="router" />
+    <JavaScript File="HomePage.js" />
+    <DockPanel>
+
+      <Grid ColumnCount="1" Dock="Bottom">   <!--로고 -->
+        <Image File="../Assets/drm.png" Width="330" Y="-10" />
+      </Grid>
+
+        <hikr.Text FontSize="40" TextAlignment="Center" Dock="Top" Margin="0,40">Drmit</hikr.Text>
+        <ScrollView>
+            <StackPanel>
+              <Rectangle ux:Class="Seperator1" Height="1.5" Fill="#bea5f2" />
+              <Seperator1 />
+              <Text ux:Class="Text1" FontSize="18" Color="#264FAEFE" Margin="20" />
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gointro}">
+                <Text1>제품소개</Text1>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator1 />
+
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gopur}">
+                <Text1>제품구매</Text1>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator1 />
+
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gopro}">
+                <Text1>프로모션</Text1>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator1 />
+
+              <!--<Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goauto}">
+                <Text1>고객지원(x)</Text1>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator1 /> -->
+
+              <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gocom}">
+                <Text1>회사소개</Text1>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator1 />
+              <!--<Panel HitTestMode="LocalBoundsAndChildren" Clicked="{gophone}"> -->
+              
+              <Panel HitTestMode="LocalBoundsAndChildren">
+                <Clicked>
+                  <LaunchUri Uri="tel:0515076114" />
+                </Clicked>
+                <Text1>문의하기</Text1>
+                <WhilePressed>
+                  <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                </WhilePressed>
+              </Panel>
+              <Seperator1 />
+
+            </StackPanel>
+        </ScrollView>
+    </DockPanel>
+</hikr.Page>

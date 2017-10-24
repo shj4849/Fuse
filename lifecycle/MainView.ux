@@ -1,0 +1,34 @@
+<App>
+  <JavaScript>
+    var Lifecycle = require('FuseJS/Lifecycle');
+
+    Lifecycle.on("enteringForeground", function() {
+        console.log("on enteringForeground");
+    });
+    Lifecycle.on("enteringInteractive", function() {
+        console.log("on enteringInteractive");
+    });
+    Lifecycle.on("exitedInteractive", function() {
+        console.log("on exitedInteractive");
+    });
+    Lifecycle.on("enteringBackground", function() {
+        console.log("on enteringBackground");
+    });
+    Lifecycle.on("stateChanged", function(newState) {
+        console.log("on stateChanged " + newState);
+    });
+    module.exports = { lifecycleState: Lifecycle.observe("stateChanged") }
+</JavaScript>
+<StackPanel>
+    <Text TextWrapping="Wrap">로그</Text>
+    <Text>Current lifecycle state:</Text>
+    <Text Value="{lifecycleState}" />
+</StackPanel>
+	<!--<Panel>
+    <Rectangle ux:Name="rect" Layer="Background" Color="#F00" />
+    <OnBackButton Handler="{someFunction}" />
+        <Change rect.Color="#00F" Duration="0.2" />
+
+    </OnBackButton>
+</Panel> -->
+</App>

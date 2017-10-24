@@ -1,0 +1,16 @@
+<hikr.Page ux:Class="Overview">
+    <Router ux:Dependency="router" />
+    <JavaScript File="Overview.js" />
+    <DockPanel>
+        <Grid ColumnCount="1" Dock="Bottom">
+            <hikr.Button Text="Back" Clicked="{cancel}" />
+        </Grid>
+        <hikr.Text FontSize="20" TextAlignment="Center" TextWrapping="Wrap" Dock="Top" Margin="0,20" > Overview </hikr.Text>
+        <ScrollView ux:Name="theScroll">
+          <WhileActive Threshold="0.1">
+            <Set theScroll.ScrollPosition="0"/>
+          </WhileActive>
+                  <Image File="../Assets/overview.png" />
+        </ScrollView>
+    </DockPanel>
+</hikr.Page>

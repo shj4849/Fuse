@@ -1,0 +1,16 @@
+<hikr.Page ux:Class="Contact">
+    <Router ux:Dependency="router" />
+    <JavaScript File="Contact.js" />
+    <DockPanel>
+    <Grid ColumnCount="1" Dock="Bottom">
+        <hikr.Button Text="Back" Clicked="{cancel}" />
+    </Grid>
+    <ClientPanel>
+        <NativeViewHost>
+            <MapView Latitude="35.190313" Longitude="129.074540" Zoom="17">
+                <MapMarker Latitude="35.190313" Longitude="129.074540" Label="Fuse HQ"/>
+            </MapView>
+        </NativeViewHost>
+    </ClientPanel>
+  </DockPanel>
+</hikr.Page>

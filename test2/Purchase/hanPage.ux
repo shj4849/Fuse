@@ -1,0 +1,32 @@
+<hikr.Page ux:Class="hanPage">
+    <Router ux:Dependency="router" />
+    <JavaScript File="hanPage.js" />
+    <DockPanel>
+      <Grid ColumnCount="1" Dock="Bottom">
+          <hikr.Button Text="Back" Clicked="{cancel}" />
+      </Grid>
+      <hikr.Text FontSize="40" TextAlignment="Center" Dock="Top" Margin="0,40"> 한글과 컴퓨터 </hikr.Text>
+
+        <ScrollView>
+            <StackPanel>
+                <Rectangle ux:Class="Sep3" Height="1.5" Fill="#bea5f2" />
+
+                <Each Items="{hancom}">
+                    <Sep3 />
+                    <!--Text 를 Panel로 감싸고 Panel에 Clicked 를 적용-->
+
+                    <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goHike}">
+                        <Text Color="#2f5b95" Value="{name}" Margin="20" />
+
+                        <!--눌렀을때 적용되는 애니메이션을 위한 트리거를 추가-->
+                        <WhilePressed>
+                            <Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+                        </WhilePressed>
+                    </Panel>
+                </Each>
+
+                <Sep3 />
+            </StackPanel>
+        </ScrollView>
+    </DockPanel>
+</hikr.Page>

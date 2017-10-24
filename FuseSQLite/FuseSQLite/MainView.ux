@@ -1,0 +1,213 @@
+<App>
+	<SQLite ux:Global="SQLite" />
+	<JavaScript>
+		var Observable = require("FuseJS/Observable");
+		var mainText = Observable("");
+		var sqlite = require('SQLite'); //SQLite를 사용하겠다고 선언합니다.
+		var db = sqlite.open("FuseDBTest.sqlite"); //데이터베이스를 있으면 가져오고 없으면 생성합니다.
+		var mTableName	= "USERS";
+		var mID			= "ID";
+		var mUserID		= "UserID";
+		var mUserPW		= "UserPW";
+		var mUserName	= "UserName";
+		var mUserEmail	= "UserEmail";
+		var mUserDate	= "UserDate";
+
+		var rowData = [{UserID:Observable("abc12"),
+						UserPW:Observable("1234"),
+						UserName:Observable("개발자"),
+						UserEmail:Observable("abc@gmail.com")}];
+
+		var query = "";
+
+		/*
+		 var result = db.query() : 쿼리를 실행하고 리턴을 받을수있습니다.
+		 리턴은 JSON 으로 들어오며 JSON.stringify(db.query(query)); 이렇게 하시면 JSON 형식을 String으로 변수에
+		 담을수있습니다.
+		 [{"name":"user"}]
+		 위와 같은 log 가 나왔다면
+		 result[0].name 로 접근하여 데이터를 가져올수있습니다.
+
+		 db.execute() : 리턴을 받지않고 실행합니다.
+
+		*/
+
+
+
+ 		/** 테이블을 체크합니다. */
+		function db_TableCheck(){
+			var result = "";
+
+			try{
+				query = "SELECT name FROM sqlite_master WHERE type='table' AND name ='"+mTableName+"'";
+				result = db.query(query);
+			}catch(error){
+				console.log("tableCheck [Exception] " + error);
+			}
+
+			if(result != ""){
+				//console.log(result[0].name);
+				if(result[0].name == mTableName){
+					// query = "drop table USERS";
+					// var result = JSON.stringify(db.query(query));
+					return true;
+				}
+			}
+			return false;
+		}
+
+		/** 테이블을 생성합니다. */
+		function db_init(){
+			try{
+				if(db_TableCheck() == false){
+					query = "create table " + mTableName
+						+ " (" + mID + " integer primary key autoincrement, "
+						+ mUserID + " TEXT NOT NULL, "
+						+ mUserPW + " TEXT NOT NULL, "
+						+ mUserName + " TEXT NOT NULL, "
+						+ mUserEmail + " TEXT NOT NULL, "
+						+ mUserDate + " DATETIME DEFAULT CURRENT_TIMESTAMP)";
+					console.log(query)   ;
+					db.execute(query);
+				}else{
+					query = "pragma table_info(USERS)";
+					var result = JSON.stringify(db.query(query));
+					//console.log(result);
+				}
+			}catch(error){
+				console.log("init [Exception] : " + error);
+			}
+		}
+
+		/** 데이터를 넣습니다. */
+		function db_insert(){
+			try {
+				query = "insert into " + mTableName + " ("+mUserID+","+mUserPW+","+mUserName+","+mUserEmail+") values ("
+				 + "'" + rowData[0].UserID.value + "',"
+				 + "'" + rowData[0].UserPW.value + "',"
+				 + "'" + rowData[0].UserName.value + "',"
+				 + "'" + rowData[0].UserEmail.value + "')";
+				console.log(query);
+				db.query(query);
+				var result = JSON.stringify(db.query("select * from "+mTableName+""));
+				console.log(result);
+				mainText.value = result;
+			}catch (error) {
+				console.log("insert [Error] " + error);
+			}
+		}
+
+		/** 마지막 ID 값을 기준으로 뒤에서부터 데이터를 삭제합니다. */
+		function db_deleted(){
+			try{
+				query = "delete from "+mTableName+" where "+mID+" = (select MAX("+mID+") from "+mTableName+");";
+				db.query(query);
+				var result = JSON.stringify(db.query("select * from "+mTableName+""));
+				console.log(result);
+				mainText.value = result;
+
+			}catch(error){
+				console.log("deleted [Error] " + error);
+			}
+		}
+
+		/** 테이블을 삭제합니다. */
+		function db_tableDrop(){
+			query = "drop table " + mTableName;
+			db.query(query);
+		}
+
+		/** 데이터를 조회해서 화면에 뿌립니다. */
+		function db_select(){
+			try{
+				var result = JSON.stringify(db.query("select * from "+mTableName+""));
+				if(result != "[]"){
+					console.log(result);
+					mainText.value = result;
+				}else{
+					mainText.value = "Not Datas";
+				}
+			}catch(error){
+				console.log("db_select [Error] : " + error);
+			}
+		}
+
+		function mainViewReSet(){
+			mainText.value = "";
+		}
+
+		/** 데이터베이스를 만듭니다. */
+		db_init();
+
+
+		/** fuseDBTest2.db 파일을 추가하여 DB를 사용하는 방법 */
+		// var fuseDBTest2;
+		// function fuseDBTest2Open () {
+		// 	if (fuseDBTest2) {
+		// 		debug_log("Closing");
+		// 		fuseDBTest2.close();
+		// 	}
+		// 	debug_log("Open fuseDBTest2 Bundle");
+		// 	fuseDBTest2 = sqlite.openFromBundle('fuseDBTest2.db');
+		// 	debug_log(JSON.stringify(fuseDBTest2.query("SELECT * FROM Payment")));
+		// }
+		// fuseDBTest2Open();
+
+
+
+		module.exports={
+			db_insert, db_select, db_deleted, mainText, mainViewReSet,
+			id: rowData[0].UserID,
+			pw: rowData[0].UserPW,
+			name: rowData[0].UserName,
+			email: rowData[0].UserEmail,
+		}
+
+
+	</JavaScript>
+
+	<ClientPanel>
+		<Grid Rows="50, 1*, 1*">
+			<Panel Color="Gray">
+				<Text Alignment="Center" Value="SQLite DB Test"  Color="Black" FontSize="20"/>
+			</Panel>
+			<ScrollView>
+				<Grid>
+					<Text Value="{mainText}" TextWrapping="Wrap" FontSize="14"/>
+				</Grid>
+			</ScrollView>
+
+			<DockPanel Color="Gray">
+				<Panel Dock="Top" Margin="0,10,0,0">
+					<StackPanel Alignment="Center" ItemSpacing="5">
+						<Grid Columns="70,200">
+							<Text Alignment="CenterLeft" Value="ID" Color="Black" Margin="0,0,10,0"/>
+							<TextField mValue="{id}"/>
+						</Grid>
+						<Grid Columns="70,200">
+							<Text Alignment="CenterLeft" Value="PW" Color="Black" Margin="0,0,10,0"/>
+							<TextField mValue="{pw}"/>
+						</Grid>
+						<Grid Columns="70,200">
+							<Text Alignment="CenterLeft" Value="Name" Color="Black" Margin="0,0,10,0"/>
+							<TextField mValue="{name}"/>
+						</Grid>
+						<Grid Columns="70,200">
+							<Text Alignment="CenterLeft" Value="Email" Color="Black" Margin="0,0,10,0"/>
+							<TextField mValue="{email}"/>
+						</Grid>
+					</StackPanel>
+				</Panel>
+
+				<StackPanel Alignment="Center">
+					<MyButton mText="ReSet" Clicked="{mainViewReSet}" Margin="0,0,0,5" mColor="#fff"/>
+					<StackPanel Alignment="Center" Orientation="Horizontal" ItemSpacing="5">
+						<MyButton mText="Insert" Clicked="{db_insert}" mColor="Black"/>
+						<MyButton mText="Select" Clicked="{db_select}" mColor="Black"/>
+						<MyButton mText="Delete" Clicked="{db_deleted}" mColor="Black"/>
+					</StackPanel>
+				</StackPanel>
+			</DockPanel>
+		</Grid>
+	</ClientPanel>
+</App>
