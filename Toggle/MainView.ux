@@ -1,0 +1,50 @@
+<App>
+	<Panel ux:Class="MyToggle" Width="80" Height="34">
+
+		<float4 ux:Property="PrimaryColor" />
+		<float4 ux:Property="SecondaryColor" />
+		<bool ux:Property="IsActive" />
+
+		<SwipeGesture ux:Name="swipe" Length="46" Direction="Right" Type="Active" IsActive="{Property IsActive}" />
+		<!--Length : on/off 거리  Direction : 움직임의 방향 Type : 활성과 비활성의 전환과 유지-->
+		<SwipingAnimation Source="swipe">
+			<Move Target="handle" X="46" />
+			<Change handle.Color="{ReadProperty SecondaryColor}" />
+			<!-- Property : 양방향 ReadProperty : 읽기 전용 WriteProperty : 쓰기 전용 -->
+			<Change background.Color="{ReadProperty PrimaryColor}" />
+		</SwipingAnimation>
+		
+		<Clicked>
+			<ToggleSwipeActive Target="swipe" />
+		</Clicked>
+
+		<Rectangle ux:Name="handle" Width="28" Margin="3" Alignment="Left" CornerRadius="3" Color="{ReadProperty PrimaryColor}">
+			<Shadow Size="1" Distance="1" Color="#0004" />
+		</Rectangle>
+
+		<Rectangle ux:Name="background" Color="#ddd" CornerRadius="4" />
+
+	</Panel>
+
+	<StackPanel Orientation="Vertical" Alignment="Center" ItemSpacing="20" Padding="10">
+		<Rectangle Layer="Background" Color="White" CornerRadius="3" />
+		
+		<MyToggle ux:Name="toggle1" PrimaryColor="#fff100" SecondaryColor="#eee" />
+		<MyToggle ux:Name="toggle2" PrimaryColor="#00a0e9" SecondaryColor="#eee" />
+		<MyToggle ux:Name="toggle3" PrimaryColor="#e4007f" SecondaryColor="#eee" />
+	</StackPanel>
+
+	<WhileTrue Value="{ReadProperty toggle1.IsActive}">
+		<Change background.Color="#fff100" Duration="0.2" />
+	</WhileTrue>
+	
+	<WhileTrue Value="{ReadProperty toggle2.IsActive}">
+		<Change background.Color="#00a0e9" Duration="0.2" />
+	</WhileTrue>
+	
+	<WhileTrue Value="{ReadProperty toggle3.IsActive}">
+		<Change background.Color="#e4007f" Duration="0.2" />
+	</WhileTrue>
+
+	<Rectangle ux:Name="background" Color="#fff" />
+</App>

@@ -1,0 +1,21 @@
+<App Background="#ddd">
+	<JavaScript File="MainView.js" />
+
+		<DockPanel Margin="10">
+			<DockPanel Dock="Top" Height="50">
+				<!-- <TextBox Value="{searchTerm}" /> -->
+			</DockPanel>
+			<Panel>
+				<ScrollView>
+					<StackPanel ItemSpacing="10">
+						<Each Items="{re}">
+							<StackPanel ItemSpacing="10" Color="White" Padding="10" Clicked="{showRe}">
+								<Text Value="{category}" TextWrapping="Wrap" />
+								<Text Value="{fcstValue}" TextWrapping="Wrap" />
+							</StackPanel>
+						</Each>
+					</StackPanel>
+				</ScrollView>
+			</Panel>
+		</DockPanel>
+</App>

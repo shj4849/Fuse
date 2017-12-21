@@ -1,0 +1,61 @@
+<App>
+  <Font File="Assets/OpenSans-Semibold.ttf" ux:Global="Semibold" />
+  <Text Color="#fff" Font="Semibold" ux:Class="MyText" />
+
+  <Image ux:Class="Icon" Density="2" StretchMode="PointPrecise" />
+  <!-- Density = n 으로 나눈 크기  (예로 0.5배임) -->
+  <!-- StretchMode => 이미지 사이즈 모드를 결정하는 속성 -->
+  <!-- UniformToFill : 비율유지하며 꽉차게      Uniform: 비율유지 -->
+  <!-- Fill : 꽉차게     PointPrecise : 원래 사이즈 -->
+
+	<Grid Rows="4.5*,1.5*,4*" ColumnCount="1">
+
+		<WrapPanel Row="1" Color="#00000080">
+      <MyText Value="70º" FontSize="70" Margin="20, 0, 0, 0" Alignment="Bottom" />
+      <Icon File="Assets/PartlyCloudyIconWhite.png" Margin="15, 0, 15, 20" Alignment="Bottom" />
+      <MyText Value="SUNDAY," Margin="0, 0, 0, 15" Alignment="Bottom" />
+      <MyText Value="MARCH" Alignment="Bottom" Margin="5, 0, 0, 15" />
+      <MyText Value="23" Alignment="Bottom" Margin="5, 0, 0, 15" />
+      
+    </WrapPanel>
+
+    <Image Row="0" RowSpan="2" File="Assets/PaloAlto.png" StretchMode="UniformToFill" />
+
+    <StackPanel Row="2" Color="#E0E0E0">
+    	<Grid ColumnCount="6" RowCount="1" Height="80">
+        <MyText ux:Class="StatText" Color="#111" FontSize="14" Alignment="CenterLeft" />
+        <Icon ux:Class="StatIcon" Margin="6" Alignment="CenterRight" />
+
+        <StatIcon File="Assets/FlagIcon.png" />
+        <StatText Value="4 MPH" />
+        <StatIcon File="Assets/CompassIcon.png" />
+        <StatText Value="SOUTH" />
+        <StatIcon File="Assets/UmbrellaIcon.png" />
+        <StatText Value="23%" />
+      </Grid>
+    	<Rectangle Height="1" Color="#999" />
+    	<Grid RowCount="3" ColumnCount="5" Height="140">
+    		<MyText ux:Class="Weekday" Color="#999" Alignment="Center" FontSize="12" />
+    		<Weekday Value="MON" />
+    	  <MyText ux:Class="Temper" Color="#333" Alignment="Center" FontSize="20" Margin="6,0,0,0" />
+        <Weekday Value="TUE" />
+        <Weekday Value="WED" />
+        <Weekday Value="THU" />
+        <Weekday Value="FRI" />
+        <Icon File="Assets/CloudsIcon.png" />
+        <Icon File="Assets/SunnyIcon.png" />
+        <Icon File="Assets/PartlyCloudyIcon.png" />
+        <Icon File="Assets/PartlyCloudyIcon.png" />
+        <Icon File="Assets/SunnyIcon.png" />
+        <Temper Value="83º" />
+        <Temper Value="85º" />
+        <Temper Value="81º" />
+        <Temper Value="82º" />
+        <Temper Value="86º" />
+      
+      </Grid>
+
+    </StackPanel>
+
+	</Grid>
+</App>

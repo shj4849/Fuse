@@ -1,0 +1,16 @@
+<App>
+	<SwipeGesture ux:Name="swipe" Length="46" Direction="Right" Type="Active" />
+	<!--Length : on/off 거리  Direction : 움직임의 방향 Type : 활성과 비활성의 전환과 유지-->
+	
+	<Panel ux:Name="MyToggle" Width="80" Height="34">
+		<Rectangle ux:Name="handle" Width="28" Margin="3" Alignment="Left" CornerRadius="3" Color="#ff8500" >
+			<SwipingAnimation Source="swipe">
+				<Move Target="handle" X="46" />
+			</SwipingAnimation>
+			<Clicked>
+				<ToggleSwipeActive Target="swipe" />
+			</Clicked>
+		</Rectangle>
+		<Rectangle ux:Name="background" Color="#ddd" CornerRadius="4" />
+	</Panel>
+</App>

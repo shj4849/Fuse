@@ -1,0 +1,32 @@
+<App>
+	<ClientPanel>
+		<Grid Alignment="Bottom" Height="30" ColumnCount="3" Margin="20">
+			<Image File="Assets/Ic  ons/addlocation.png" Color="#02FF8D" />
+			<Image File="Assets/Icons/location.png" Color="#FE0A0A" />
+			<Image File="Assets/Icons/person.png" Color="#5501FE" />
+		</Grid>
+		<StackPanel Orientation="Horizontal" Width="100%" Height="60%" ItemSpacing="20" Dock="Fill" Alignment="Center">
+			<Panel Width="170" Height="300" Alignment="Left">
+					<Image File="Assets/1.png" StretchMode="Uniform" Alignment="Center" />
+					<Rectangle Color="#FEFEFE">
+						<Stroke Width="3" Color="#0011FC" />
+					</Rectangle>
+					<WhilePressed>
+							<Rotate Degrees="45" Easing="CubicInOut" Duration="0.5" />
+							<Scale Factor="2" Easing="CubicInOut" Duration="0.5" />
+							<!-- <Change myRectangle.Color="#FC5185"      Duration="0.3" /> -->
+							<!-- <Change myRectangle.CornerRadius="15" 	 Duration="0.3" /> -->
+						</WhilePressed>
+			</Panel>
+			<Panel Width="170" Height="300" Alignment="Right">
+				<Rectangle>
+					<Stroke Width="3" Color="#f00" />
+				</Rectangle>
+				<Image File="Assets/2.png" StretchMode="Uniform" Alignment="Center" />
+			</Panel>
+		</StackPanel>
+
+	</ClientPanel>
+
+
+</App>

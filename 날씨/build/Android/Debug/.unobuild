@@ -1,0 +1,4 @@
+$: -420596136
+BuildCommand: build.bat
+RunCommand: run.bat
+Product: App1.apk

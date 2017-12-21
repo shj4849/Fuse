@@ -1,0 +1,324 @@
+[Uno.Compiler.UxGenerated]
+public partial class MainView: Fuse.App
+{
+    global::Uno.UX.Property<string> temp_Value_inst;
+    internal global::Fuse.Reactive.EventBinding temp_eb0;
+    internal global::Fuse.Reactive.EventBinding temp_eb1;
+    internal global::Fuse.Reactive.EventBinding temp_eb2;
+    internal global::Fuse.Reactive.EventBinding temp_eb3;
+    internal global::Fuse.Reactive.EventBinding temp_eb4;
+    internal global::Fuse.Reactive.EventBinding temp_eb5;
+    internal global::Fuse.Reactive.EventBinding temp_eb6;
+    internal global::Fuse.Reactive.EventBinding temp_eb7;
+    internal global::Fuse.Reactive.EventBinding temp_eb8;
+    internal global::Fuse.Reactive.EventBinding temp_eb9;
+    internal global::Fuse.Reactive.EventBinding temp_eb10;
+    internal global::Fuse.Reactive.EventBinding temp_eb11;
+    internal global::Fuse.Reactive.EventBinding temp_eb12;
+    internal global::Fuse.Reactive.EventBinding temp_eb13;
+    internal global::Fuse.Reactive.EventBinding temp_eb14;
+    internal global::Fuse.Reactive.EventBinding temp_eb15;
+    global::Uno.UX.NameTable __g_nametable;
+    static string[] __g_static_nametable = new string[] {
+        "temp_eb0",
+        "temp_eb1",
+        "temp_eb2",
+        "temp_eb3",
+        "temp_eb4",
+        "temp_eb5",
+        "temp_eb6",
+        "temp_eb7",
+        "temp_eb8",
+        "temp_eb9",
+        "temp_eb10",
+        "temp_eb11",
+        "temp_eb12",
+        "temp_eb13",
+        "temp_eb14",
+        "temp_eb15"
+    };
+    static MainView()
+    {
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.Linear, "Linear");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.QuadraticIn, "QuadraticIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.QuadraticOut, "QuadraticOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.QuadraticInOut, "QuadraticInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.CubicIn, "CubicIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.CubicOut, "CubicOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.CubicInOut, "CubicInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.QuarticIn, "QuarticIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.QuarticOut, "QuarticOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.QuarticInOut, "QuarticInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.QuinticIn, "QuinticIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.QuinticOut, "QuinticOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.QuinticInOut, "QuinticInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.SinusoidalIn, "SinusoidalIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.SinusoidalOut, "SinusoidalOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.SinusoidalInOut, "SinusoidalInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.ExponentialIn, "ExponentialIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.ExponentialOut, "ExponentialOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.ExponentialInOut, "ExponentialInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.CircularIn, "CircularIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.CircularOut, "CircularOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.CircularInOut, "CircularInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.ElasticIn, "ElasticIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.ElasticOut, "ElasticOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.ElasticInOut, "ElasticInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.BackIn, "BackIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.BackOut, "BackOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.BackInOut, "BackInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.BounceIn, "BounceIn");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.BounceOut, "BounceOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.BounceInOut, "BounceInOut");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Transparent, "Transparent");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Transparent, "Transparent");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Black, "Black");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Black, "Black");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Silver, "Silver");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Silver, "Silver");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Gray, "Gray");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Gray, "Gray");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.White, "White");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.White, "White");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Maroon, "Maroon");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Maroon, "Maroon");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Red, "Red");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Red, "Red");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Purple, "Purple");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Purple, "Purple");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Fuchsia, "Fuchsia");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Fuchsia, "Fuchsia");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Green, "Green");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Green, "Green");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Lime, "Lime");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Lime, "Lime");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Olive, "Olive");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Olive, "Olive");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Yellow, "Yellow");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Yellow, "Yellow");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Navy, "Navy");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Navy, "Navy");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Blue, "Blue");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Blue, "Blue");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Teal, "Teal");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Teal, "Teal");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Colors.Aqua, "Aqua");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Drawing.Brushes.Aqua, "Aqua");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Elements.TransformOrigins.TopLeft, "TopLeft");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Elements.TransformOrigins.Center, "Center");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Elements.TransformOrigins.Anchor, "Anchor");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Elements.TransformOrigins.HorizontalBoxCenter, "HorizontalBoxCenter");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Elements.TransformOrigins.VerticalBoxCenter, "VerticalBoxCenter");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Elements.TranslationModes.TransformOriginOffset, "TransformOriginOffset");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Elements.TranslationModes.PositionOffset, "PositionOffset");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Elements.TranslationModes.SizeFactor, "SizeFactor");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Elements.TranslationModes.Size, "Size");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Size, "Size");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.Actions.GiveFocus.Singleton, "GiveFocus");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.WhileKeyboardVisible.Keyboard, "Keyboard");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.LayoutTransition.PositionLayoutChange, "LayoutChange");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.LayoutTransition.SizeLayoutChange, "LayoutChange");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.LayoutTransition.WorldPositionChange, "WorldPositionChange");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.LayoutTransition.PositionChange, "PositionChange");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.LayoutTransition.ResizeSizeChange, "SizeChange");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.LayoutTransition.ScalingSizeChange, "SizeChange");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.IScrolledLengths.Points, "Points");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.IScrolledLengths.Pixels, "Pixels");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.IScrolledLengths.ContentSize, "ContentSize");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Triggers.IScrolledLengths.ScrollViewSize, "ScrollViewSize");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Resources.MemoryPolicy.PreloadRetain, "PreloadRetain");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Resources.MemoryPolicy.UnloadUnused, "UnloadUnused");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Resources.MemoryPolicy.QuickUnload, "QuickUnload");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Resources.MemoryPolicy.UnloadInBackgroundPolicy, "UnloadInBackground");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.Thin, "Thin");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.Light, "Light");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.Regular, "Regular");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.Medium, "Medium");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.Bold, "Bold");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.ThinItalic, "ThinItalic");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.LightItalic, "LightItalic");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.Italic, "Italic");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.MediumItalic, "MediumItalic");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.BoldItalic, "BoldItalic");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Font.PlatformDefault, "PlatformDefault");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.ScalingModes.Identity, "Identity");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Local, "Local");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.ParentSize, "ParentSize");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Width, "Width");
+        global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Height, "Height");
+    }
+    [global::Uno.UX.UXConstructor]
+    public MainView()
+    {
+        InitializeUX();
+    }
+    void InitializeUX()
+    {
+        var temp1 = new global::Fuse.Reactive.FuseJS.DiagnosticsImplModule();
+        var temp2 = new global::Fuse.Reactive.FuseJS.Http();
+        var temp3 = new global::Fuse.Reactive.FuseJS.TimerModule();
+        var temp4 = new global::Fuse.Drawing.BrushConverter();
+        var temp5 = new global::Fuse.Triggers.BusyTaskModule();
+        var temp6 = new global::Fuse.Testing.UnoTestingHelper();
+        var temp7 = new global::Fuse.FileSystem.FileSystemModule();
+        var temp8 = new global::Fuse.Storage.StorageModule();
+        var temp9 = new global::Fuse.WebSocket.WebSocketClientModule();
+        var temp10 = new global::Polyfills.Window.WindowModule();
+        var temp11 = new global::FuseJS.Globals();
+        var temp12 = new global::FuseJS.Lifecycle();
+        var temp13 = new global::FuseJS.Environment();
+        var temp14 = new global::FuseJS.Base64();
+        var temp15 = new global::FuseJS.Bundle();
+        var temp16 = new global::FuseJS.FileReaderImpl();
+        var temp17 = new global::FuseJS.UserEvents();
+        __g_nametable = new global::Uno.UX.NameTable(null, __g_static_nametable);
+        var temp = new global::Fuse.Controls.Text();
+        temp_Value_inst = new App_FuseControlsTextControl_Value_Property(temp, __selector0);
+        var temp18 = new global::Fuse.Reactive.Data("a");
+        var temp19 = new global::Fuse.Reactive.Data("Num1");
+        var temp20 = new global::Fuse.Reactive.Data("Num2");
+        var temp21 = new global::Fuse.Reactive.Data("Num3");
+        var temp22 = new global::Fuse.Reactive.Data("Sum1");
+        var temp23 = new global::Fuse.Reactive.Data("Num4");
+        var temp24 = new global::Fuse.Reactive.Data("Num5");
+        var temp25 = new global::Fuse.Reactive.Data("Num6");
+        var temp26 = new global::Fuse.Reactive.Data("Sum2");
+        var temp27 = new global::Fuse.Reactive.Data("Num7");
+        var temp28 = new global::Fuse.Reactive.Data("Num8");
+        var temp29 = new global::Fuse.Reactive.Data("Num9");
+        var temp30 = new global::Fuse.Reactive.Data("Sum3");
+        var temp31 = new global::Fuse.Reactive.Data("NumC");
+        var temp32 = new global::Fuse.Reactive.Data("Num0");
+        var temp33 = new global::Fuse.Reactive.Data("Result");
+        var temp34 = new global::Fuse.Reactive.Data("Mi");
+        var temp35 = new global::Fuse.Reactive.JavaScript(__g_nametable);
+        var temp36 = new global::Fuse.Controls.Grid();
+        var temp37 = new global::Fuse.Reactive.DataBinding(temp_Value_inst, temp18, Fuse.Reactive.BindingMode.Default);
+        var temp38 = new global::MyButton();
+        temp_eb0 = new global::Fuse.Reactive.EventBinding(temp19);
+        var temp39 = new global::MyButton();
+        temp_eb1 = new global::Fuse.Reactive.EventBinding(temp20);
+        var temp40 = new global::MyButton();
+        temp_eb2 = new global::Fuse.Reactive.EventBinding(temp21);
+        var temp41 = new global::MyButton();
+        temp_eb3 = new global::Fuse.Reactive.EventBinding(temp22);
+        var temp42 = new global::MyButton();
+        temp_eb4 = new global::Fuse.Reactive.EventBinding(temp23);
+        var temp43 = new global::MyButton();
+        temp_eb5 = new global::Fuse.Reactive.EventBinding(temp24);
+        var temp44 = new global::MyButton();
+        temp_eb6 = new global::Fuse.Reactive.EventBinding(temp25);
+        var temp45 = new global::MyButton();
+        temp_eb7 = new global::Fuse.Reactive.EventBinding(temp26);
+        var temp46 = new global::MyButton();
+        temp_eb8 = new global::Fuse.Reactive.EventBinding(temp27);
+        var temp47 = new global::MyButton();
+        temp_eb9 = new global::Fuse.Reactive.EventBinding(temp28);
+        var temp48 = new global::MyButton();
+        temp_eb10 = new global::Fuse.Reactive.EventBinding(temp29);
+        var temp49 = new global::MyButton();
+        temp_eb11 = new global::Fuse.Reactive.EventBinding(temp30);
+        var temp50 = new global::MyButton();
+        temp_eb12 = new global::Fuse.Reactive.EventBinding(temp31);
+        var temp51 = new global::MyButton();
+        temp_eb13 = new global::Fuse.Reactive.EventBinding(temp32);
+        var temp52 = new global::MyButton();
+        temp_eb14 = new global::Fuse.Reactive.EventBinding(temp33);
+        var temp53 = new global::MyButton();
+        temp_eb15 = new global::Fuse.Reactive.EventBinding(temp34);
+        temp35.Code = "\n\tvar Observable = require(\"FuseJS/Observable\");\n\n\tvar a = Observable(\"\");\n\tvar b = Observable(0);\n\tvar c = Observable(0);\n\tvar check = 0;\n\n\tfunction Num1(){\n\t\t//a.value = a.value + \"1\";\n\t\ta.value = a.value+\"1\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction Num2(){\n\t\ta.value = a.value + \"2\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction Num3(){\n\t\ta.value = a.value + \"3\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction Num4(){\n\t\ta.value = a.value + \"4\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction Num5(){\n\t\ta.value = a.value + \"5\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction Num6(){\n\t\ta.value = a.value + \"6\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction Num7(){\n\t\ta.value = a.value + \"7\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction Num8(){\n\t\ta.value = a.value + \"8\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction Num9(){\n\t\ta.value = a.value + \"9\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction Num0(){\n\t\ta.value = a.value + \"0\";\n\t\tconsole.log(a.value);\n\t}\n\tfunction NumC(){\n\t\ta.value = \"\";\n\t\tconsole.log(a.value);\n\t}\n\n\tfunction Sum1() {\n\t\tcheck = 1; \n\t\tb.value = parseInt(a.value);\n\t\t//a.value=\"\";\n\t\tconsole.log(b.value);\n\t\tconsole.log(check);\n\t}\n\tfunction Sum2() {\n\t\tcheck = 2;\n\t\tb.value = parseInt(a.value);\n\t\t//a.value=\"\";\n\t\tconsole.log(check);\n\t}\n\tfunction Sum3() {\n\t\tcheck = 3;\n\t\tb.value = parseInt(a.value);\n\t\t//a.value=\"\";\n\t\tconsole.log(check);\n\t}\n\tfunction Sum4() {\n\t\tcheck = 4;\n\t\tb.value = parseInt(a.value);\n\t\t//a.value=\"\";\n\t\tconsole.log(check);\n\t}\n\tfunction Result() {\n\t\tif(check == 1){\n\t\t\tconsole.log(check);\n\t\t\tconsole.log(b.value)\n\t\t\tconsole.log(a.value);\n\t\t\ta.value = b.value + parseInt(a.value);\n\t\t\tconsole.log(a.value);\n\t\t}\n\t\telse if(check == 2){\n\t\t\t\n\t\t}\n\t\telse if(check == 3){\n\t\t\t\n\t\t}\n\t\telse if(check == 4){\n\t\t\t\n\t\t}\n\t}\n\tfunction Mi() { //뒤에서 하나씩 지우기\n\t\ta.value = a.value.substring(0, a.value.length - 1);\n\t}\n\n\tmodule.exports={\n\t\ta,b,Sum1,Sum2,Sum3,Sum4,Num1,Num2,Num3,Num4,Num5,Num6,Num7,Num8,Num9,Num0,NumC, Result, Mi\n\t};\n\t";
+        temp35.LineNumber = 2;
+        temp35.FileName = "MainView.ux";
+        temp36.RowCount = 5;
+        temp36.ColumnCount = 4;
+        temp36.Children.Add(temp);
+        temp36.Children.Add(temp38);
+        temp36.Children.Add(temp39);
+        temp36.Children.Add(temp40);
+        temp36.Children.Add(temp41);
+        temp36.Children.Add(temp42);
+        temp36.Children.Add(temp43);
+        temp36.Children.Add(temp44);
+        temp36.Children.Add(temp45);
+        temp36.Children.Add(temp46);
+        temp36.Children.Add(temp47);
+        temp36.Children.Add(temp48);
+        temp36.Children.Add(temp49);
+        temp36.Children.Add(temp50);
+        temp36.Children.Add(temp51);
+        temp36.Children.Add(temp52);
+        temp36.Children.Add(temp53);
+        temp.FontSize = 50f;
+        temp.Alignment = Fuse.Elements.Alignment.Center;
+        global::Fuse.Controls.Grid.SetColumnSpan(temp, 4);
+        temp.Bindings.Add(temp37);
+        temp38.Text = "1";
+        global::Fuse.Gestures.Clicked.AddHandler(temp38, temp_eb0.OnEvent);
+        temp38.Bindings.Add(temp_eb0);
+        temp39.Text = "2";
+        global::Fuse.Gestures.Clicked.AddHandler(temp39, temp_eb1.OnEvent);
+        temp39.Bindings.Add(temp_eb1);
+        temp40.Text = "3";
+        global::Fuse.Gestures.Clicked.AddHandler(temp40, temp_eb2.OnEvent);
+        temp40.Bindings.Add(temp_eb2);
+        temp41.Text = "+";
+        global::Fuse.Gestures.Clicked.AddHandler(temp41, temp_eb3.OnEvent);
+        temp41.Bindings.Add(temp_eb3);
+        temp42.Text = "4";
+        global::Fuse.Gestures.Clicked.AddHandler(temp42, temp_eb4.OnEvent);
+        temp42.Bindings.Add(temp_eb4);
+        temp43.Text = "5";
+        global::Fuse.Gestures.Clicked.AddHandler(temp43, temp_eb5.OnEvent);
+        temp43.Bindings.Add(temp_eb5);
+        temp44.Text = "6";
+        global::Fuse.Gestures.Clicked.AddHandler(temp44, temp_eb6.OnEvent);
+        temp44.Bindings.Add(temp_eb6);
+        temp45.Text = "-";
+        global::Fuse.Gestures.Clicked.AddHandler(temp45, temp_eb7.OnEvent);
+        temp45.Bindings.Add(temp_eb7);
+        temp46.Text = "7";
+        global::Fuse.Gestures.Clicked.AddHandler(temp46, temp_eb8.OnEvent);
+        temp46.Bindings.Add(temp_eb8);
+        temp47.Text = "8";
+        global::Fuse.Gestures.Clicked.AddHandler(temp47, temp_eb9.OnEvent);
+        temp47.Bindings.Add(temp_eb9);
+        temp48.Text = "9";
+        global::Fuse.Gestures.Clicked.AddHandler(temp48, temp_eb10.OnEvent);
+        temp48.Bindings.Add(temp_eb10);
+        temp49.Text = "*";
+        global::Fuse.Gestures.Clicked.AddHandler(temp49, temp_eb11.OnEvent);
+        temp49.Bindings.Add(temp_eb11);
+        temp50.Text = "C";
+        global::Fuse.Gestures.Clicked.AddHandler(temp50, temp_eb12.OnEvent);
+        temp50.Bindings.Add(temp_eb12);
+        temp51.Text = "0";
+        global::Fuse.Gestures.Clicked.AddHandler(temp51, temp_eb13.OnEvent);
+        temp51.Bindings.Add(temp_eb13);
+        temp52.Text = "=";
+        global::Fuse.Gestures.Clicked.AddHandler(temp52, temp_eb14.OnEvent);
+        temp52.Bindings.Add(temp_eb14);
+        temp53.Text = "/";
+        global::Fuse.Gestures.Clicked.AddHandler(temp53, temp_eb15.OnEvent);
+        temp53.Bindings.Add(temp_eb15);
+        __g_nametable.This = this;
+        __g_nametable.Objects.Add(temp_eb0);
+        __g_nametable.Objects.Add(temp_eb1);
+        __g_nametable.Objects.Add(temp_eb2);
+        __g_nametable.Objects.Add(temp_eb3);
+        __g_nametable.Objects.Add(temp_eb4);
+        __g_nametable.Objects.Add(temp_eb5);
+        __g_nametable.Objects.Add(temp_eb6);
+        __g_nametable.Objects.Add(temp_eb7);
+        __g_nametable.Objects.Add(temp_eb8);
+        __g_nametable.Objects.Add(temp_eb9);
+        __g_nametable.Objects.Add(temp_eb10);
+        __g_nametable.Objects.Add(temp_eb11);
+        __g_nametable.Objects.Add(temp_eb12);
+        __g_nametable.Objects.Add(temp_eb13);
+        __g_nametable.Objects.Add(temp_eb14);
+        __g_nametable.Objects.Add(temp_eb15);
+        this.Children.Add(temp35);
+        this.Children.Add(temp36);
+    }
+    static global::Uno.UX.Selector __selector0 = "Value";
+}

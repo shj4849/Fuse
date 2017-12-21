@@ -1,0 +1,29 @@
+<App>
+	<ClientPanel>
+		<Grid Alignment="Bottom" Height="30" ColumnCount="3" Margin="20">
+			<Image File="Assets/Icons/addlocation.png" Color="#02FF8D"/>
+			<Image File="Assets/Icons/location.png" Color="#FE0A0A"/>
+			<Image File="Assets/Icons/person.png" Color="#5501FE"/>
+		</Grid>
+		<StackPanel Orientation="Horizontal" Width="100%" Height="60%" ItemSpacing="20" Dock="Fill" Alignment="Center">
+			<Rectangle ux:Name="rec1" Color="#FEFEFE" Width="170" Height="300" Alignment="Left" X="0" CornerRadius="5">
+				<Image File="Assets/1.png" StretchMode="Uniform" Alignment="Center"/>
+				<Stroke Width="1" Color="#0011FC" Alignment="Center"/>
+				<Clicked>
+					<Scale Factor="1.8" Duration="0.5"/>
+					<Move X="100" Easing="CubicInOut" Duration="0.1"/>
+					<Change rec2.X="300" Duration="0"/>
+				</Clicked>
+			</Rectangle>
+			<Rectangle ux:Name="rec2" Color="#FEFEFE" Width="170" Height="300" Alignment="Right" X="0" CornerRadius="5">
+				<Image File="Assets/2.png" StretchMode="Uniform" Alignment="Center" X="0"/>
+				<Stroke Width="1" Color="#f00" Alignment="Center"/>
+				<Clicked>
+					<Scale Factor="1.8" Easing="CubicInOut" Duration="0.5"/>
+					<Move X="-100" Duration="0.1"/>
+					<Change rec1.X="-300" Duration="0"/>
+				</Clicked>
+			</Rectangle>
+		</StackPanel>
+	</ClientPanel>
+</App>

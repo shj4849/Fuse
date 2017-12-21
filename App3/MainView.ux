@@ -1,0 +1,12 @@
+<App>
+	<Rectangle Color="#7EF529" Width="30" Height="30" ux:Class="MyRectangle" />
+	<Circle Color="#0133FD" Width="60" Height="60" ux:Class="MyCircle" />
+	<StackPanel>
+		<MyRectangle />
+		<MyCircle />
+		<MyRectangle />
+		<Circle Color="#F70606" Width="40" Height="40" Margin="0, 0, 0, 0" />
+		<MyCircle />
+		
+	</StackPanel>
+</App>

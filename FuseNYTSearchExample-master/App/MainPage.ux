@@ -1,0 +1,22 @@
+<Page ux:Class="MainPage">
+	<DockPanel Margin="10">
+		<DockPanel Dock="Top" Height="50">
+			<TextBox Value="{searchTerm}" />
+			<Button Text="Search" Clicked="{ser}" Dock="Right" />
+		</DockPanel>
+		<Panel>
+			<ScrollView>
+				<StackPanel ItemSpacing="10">
+					<Each Items="{re}">
+						<StackPanel ItemSpacing="10" Color="White" Padding="10" Clicked="{showRe}">
+							<Text Value="{category}" TextWrapping="Wrap" />
+							<Text Value="{fcstValue}" TextWrapping="Wrap" />
+							<!-- <Text Value="{headline.main}" TextWrapping="Wrap" /> -->
+							<!-- <Text Value="{lead_paragraph}" FontSize="14" TextWrapping="Wrap" /> -->
+						</StackPanel>
+					</Each>
+				</StackPanel>
+			</ScrollView>
+		</Panel>
+	</DockPanel>
+</Page>

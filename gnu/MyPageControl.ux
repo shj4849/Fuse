@@ -2,7 +2,7 @@
 	<Rectangle ux:Name="ract" Height="5" Width="80%" Alignment="Bottom" LayoutMaster="m1">
 		<Stroke Width="3" Color="#f00" />
 		<LayoutAnimation>
-			<Move RelativeTo="PositionChange" X="1" Duration="0.2" Easing="BounceIn"/> <!-- 기준 이동하고자하는 방향 시간 -->
+			<Move RelativeTo="PositionChange" X="1" Duration="0.2" Easing="BounceIn" /> <!-- 기준 이동하고자하는 방향 시간 -->
 		</LayoutAnimation>
 	</Rectangle>
 
@@ -36,7 +36,7 @@
 				
 				<!-- 오른쪽 ExitingAnimation 왼쪽 EnterintAnimation -->
 				<EnteringAnimation>
-					<Scale Factor="0.6"/>
+					<Scale Factor="0.6" />
 					<Rotate Degrees="45" />
 				</EnteringAnimation>
 			</Page>
@@ -48,12 +48,12 @@
 				<Text Value="Page2" Alignment="Center" FontSize="50" />
 
 				<ExitingAnimation>
-					<Scale Factor="0.6"/>
+					<Scale Factor="0.6" />
 					<Rotate Degrees="-45" />
 				</ExitingAnimation>
 
 				<EnteringAnimation>
-					<Scale Factor="0.6"/>
+					<Scale Factor="0.6" />
 					<Rotate Degrees="45" />
 				</EnteringAnimation>
 			</Page>
@@ -64,7 +64,7 @@
 				</WhileActive>
 				<Text Value="Page3" Alignment="Center" FontSize="50" />
 				<ExitingAnimation>
-					<Scale Factor="0.6"/>
+					<Scale Factor="0.6" />
 					<Rotate Degrees="-45" />
 				</ExitingAnimation>
 

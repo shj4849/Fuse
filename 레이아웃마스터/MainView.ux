@@ -1,0 +1,48 @@
+<App>
+	<Rectangle ux:Name="rec" LayoutMaster="lay1">
+		<Stroke Width="4" Color="#f00" Alignment="Center" />
+
+		<LayoutAnimation>
+			<Move RelativeTo="PositionChange" X="1" Y="1" Duration="0.5" Easing="BounceIn"/>
+			<Scale RelativeTo="SizeChange"  Duration="0.5" />
+		</LayoutAnimation>
+	</Rectangle>
+
+
+	<StackPanel ItemSpacing="20" Alignment="Center">
+		<Panel>
+			<Rectangle ux:Name="lay1" Width="150" Height="150" Color="#8832D8">
+				<Text Value="Layout" Alignment="Center" FontSize="20" Color="#FAEE02" />
+				
+				<Clicked>
+					<Set rec.LayoutMaster="lay1" />
+				</Clicked>
+
+			</Rectangle>
+		</Panel>
+		<StackPanel Orientation="Horizontal" ItemSpacing="20">
+			<Panel>
+						<Rectangle ux:Name="lay2" Width="200" Height="200" Color="#19EA0A">
+							<Text Alignment="Center" Value="Layout" FontSize="20" Color="#2903FF" />
+			
+							<Clicked>
+								<Set rec.LayoutMaster="lay2" />
+							</Clicked>
+			
+						</Rectangle>
+					</Panel>
+			<Panel>
+				<Rectangle Width="100" Height="300" Color="#FCEF00" ux:Name="lay3">
+					<Text Value="Layout" Alignment="Center" FontSize="20" Color="#FF0303" />
+
+				<Clicked>
+					<Set rec.LayoutMaster="lay3" />
+				</Clicked>
+				</Rectangle>
+			</Panel>
+		</StackPanel>
+		
+	</StackPanel>
+	
+	
+</App>

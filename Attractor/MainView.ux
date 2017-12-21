@@ -1,0 +1,53 @@
+<App>
+	<Rectangle Height="75" Margin="5" Color="#25D4C5" CornerRadius="5" ux:Class="BottomButton" ux:Name="Btn" >
+		<WhilePressed>
+			<Change Btn.Color="#ff5000" Duration="0.01" DurationBack="0.2" />
+		</WhilePressed>
+	</Rectangle>
+	<Text Alignment="Center" Color="#fff" ux:Class="BntText" />
+	
+	<DockPanel>
+		<Panel Dock="Bottom">
+			<BottomButton Alignment="Center" Width="100" Height="70">
+				<BntText Value="Center" />
+				<Clicked>
+					<Set redPosition.Value="0,0,0" />
+				</Clicked>
+			</BottomButton>
+			<Grid ColumnCount="2" RowCount="2">
+				<BottomButton>
+					<BntText Value="TopLeft" />
+					<Clicked>
+					<Set redPosition.Value="-100,-100,0" />
+				</Clicked>
+				</BottomButton>
+				<BottomButton>
+					<BntText Value="TopRight" />
+					<Clicked>
+					<Set redPosition.Value="100,-100,0" />
+				</Clicked>
+				</BottomButton>
+				<BottomButton>
+					<BntText Value="BottomLeft" />
+					<Clicked>
+					<Set redPosition.Value="-100,100,0" />
+				</Clicked>
+				</BottomButton>
+				<BottomButton>
+					<BntText Value="BottomRight" />
+					<Clicked>
+					<Set redPosition.Value="100,100,0" />
+				</Clicked>
+				</BottomButton>
+			</Grid>
+		</Panel>
+		<Panel>
+			<Rectangle CornerRadius="5" Width="25" Height="25" Color="#FF0303" />
+				<Translation ux:Name="rawPosition" />
+				<!-- 공간에서 선형 오프셋을 나타냄 -->
+				<Attractor Target="rawPosition.Vector" ux:Name="redPosition" />
+				<!-- Translation.Vector는 X,Y,Z 축 모두 사용하여 움직인다는 속성 -->
+				<!-- Animator와 Target 사이의 중개자 역할을 하는 태그 -->
+		</Panel>
+	</DockPanel>
+</App>

@@ -1,0 +1,151 @@
+<App>
+	<JavaScript>
+	var Observable = require("FuseJS/Observable");
+
+	var a = Observable("");
+	var check = 0;
+
+	function Num1(){
+		if(check == 1){
+			a.value="";
+			check = 0;
+		}
+
+		a.value = a.value+"1";
+		console.log(a.value);
+	}
+	function Num2(){
+				if(check == 1){
+			a.value="";
+			check = 0;
+		}
+		a.value = a.value + "2";
+	}
+	function Num3(){
+				if(check == 1){
+			a.value="";
+			check = 0;
+		}
+		a.value = a.value + "3";
+	}
+	function Num4(){
+				if(check == 1){
+			a.value="";
+			check = 0;
+		}
+		a.value = a.value + "4";
+	}
+	function Num5(){
+				if(check == 1){
+			a.value="";
+			check = 0;
+		}
+		a.value = a.value + "5";
+	}
+	function Num6(){
+				if(check == 1){
+			a.value="";
+			check = 0;
+		}
+		a.value = a.value + "6";
+	}
+	function Num7(){
+				if(check == 1){
+			a.value="";
+			check = 0;
+		}
+		a.value = a.value + "7";
+	}
+	function Num8(){
+				if(check == 1){
+			a.value="";
+			check = 0;
+		}
+		a.value = a.value + "8";
+	}
+	function Num9(){
+				if(check == 1){
+			a.value="";
+			check = 0;
+		}
+		a.value = a.value + "9";
+	}
+	function Num0(){
+				if(check == 1){
+			a.value="";
+			check = 0;
+		}
+		a.value = a.value + "0";
+	}
+	function NumC(){
+		a.value = "";
+	}
+
+	function Sum1() {
+		a.value = a.value + "+";
+		if(check == 1){
+			check=0;
+		}
+	}
+	function Sum2() {
+		a.value = a.value + "-";
+		if(check == 1){
+			check=0;
+		}
+	}
+	function Sum3() {
+		a.value = a.value + "*";
+		if(check == 1){
+			check=0;
+		}
+	}
+	function Sum4() {
+		a.value = a.value + "/";
+		if(check == 1){
+			check=0;
+		}
+	}
+	function Result() {
+		check = 1;
+		a.value = eval(a.value);
+	}
+	function Mi() { //뒤에서 하나씩 지우기
+		a.value = a.value + "";
+		a.value = a.value.substring(0, a.value.length - 1);
+	}
+
+	module.exports={
+		a,Sum1,Sum2,Sum3,Sum4,Num1,Num2,Num3,Num4,Num5,Num6,Num7,Num8,Num9,Num0,NumC, Result, Mi
+	};
+	</JavaScript>
+
+	<Button Color="#DEDDDD" ux:Class="MyButton" Margin="3" />
+	<Grid ColumnCount="4" RowCount="6">
+		<Text ColumnSpan="4" Value="{a}" Alignment="Center" FontSize="50" />
+		<MyButton ColumnSpan="4" Text="&lt;-----" Clicked="{Mi}" />
+		<MyButton Text="1" Clicked="{Num1}" />
+		<MyButton Text="2" Clicked="{Num2}" />
+		<MyButton Text="3" Clicked="{Num3}" />
+		<MyButton Text="+" Clicked="{Sum1}" />
+		<MyButton Text="4" Clicked="{Num4}" />
+		<MyButton Text="5" Clicked="{Num5}" />
+		<MyButton Text="6" Clicked="{Num6}" />
+		<MyButton Text="-" Clicked="{Sum2}" />
+		<MyButton Text="7" Clicked="{Num7}" />
+		<MyButton Text="8" Clicked="{Num8}" />
+		<MyButton Text="9" Clicked="{Num9}" />
+		<MyButton Text="*" Clicked="{Sum3}" />
+		<MyButton Text="C" Clicked="{NumC}" />
+		<MyButton Text="0" Clicked="{Num0}" />
+		<MyButton Text="=" Clicked="{Result}" />
+		<MyButton Text="/" Clicked="{Sum4}" />
+	</Grid>
+<!-- 	<StackPanel>
+		<TextBox>
+			{a}
+		</TextBox>
+		<Button Text="합(+)" Clicked="{Sum}" Height="50" Width="50" Color="#F6FA01" Alignment="Center" Margin="5" />
+		<Text Value="결과 =&gt; {b}" />
+
+	</StackPanel> -->
+</App>
